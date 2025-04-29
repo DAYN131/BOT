@@ -1,0 +1,30 @@
+{
+  "webot": {
+    "token": "8143257666:AAEkrr8X6zKG67ZB5s2EzYzD8IlLpPcPphE",
+    "chat_id": "1448079581"
+  },
+  "wefile": {
+    "path": "mnt/c/py/tmp"
+  },
+
+  "wesql": {
+    "host": "localhost",
+    "username": "web",
+    "password": "123456789",
+    "port": "3307",
+    "db":"PuntoVenta"
+  },
+
+  "ssh": {
+    "host": "shell.xshellz.com",
+    "port": "22",
+    "path": "/home/user",
+    "user": "Danypiece",
+    "password": "shell@1234"
+  },
+  "backup": {
+    "path": "/mnt/c/py/backup/",
+    "log_path": "/var/log/mysql/",
+    "backup_log_path": "/mnt/c/py/folder1/"
+  }
+}
