@@ -1,0 +1,66 @@
+2025-03-10T20:23:52.441322Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.41-0ubuntu0.24.04.1) starting as process 277
+2025-03-10T20:23:52.472869Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-03-10T20:23:53.160029Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-03-10T20:23:53.389870Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2025-03-10T20:23:53.405821Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2025-03-10T20:23:53.468274Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-03-10T20:23:53.468301Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-03-10T20:23:53.512988Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.41-0ubuntu0.24.04.1'  socket: '/var/run/mysqld/mysqld.sock'  port: 3307  (Ubuntu).
+2025-03-10T20:23:53.512985Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '0.0.0.0' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-03-12T19:19:30.351300Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.41-0ubuntu0.24.04.1) starting as process 262
+2025-03-12T19:19:30.377530Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-03-12T19:19:31.174836Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-03-12T19:19:31.430516Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2025-03-12T19:19:31.450350Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2025-03-12T19:19:31.563764Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-03-12T19:19:31.563809Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-03-12T19:19:31.617988Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '0.0.0.0' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-03-12T19:19:31.618152Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.41-0ubuntu0.24.04.1'  socket: '/var/run/mysqld/mysqld.sock'  port: 3307  (Ubuntu).
+2025-03-12T19:19:34.536445Z 8 [Warning] [MY-013360] [Server] Plugin mysql_native_password reported: ''mysql_native_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-12T21:21:23.757797Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.41-0ubuntu0.24.04.1) starting as process 262
+2025-03-12T21:21:23.795237Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-03-12T21:21:24.650782Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-03-12T21:21:25.036746Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2025-03-12T21:21:25.063499Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2025-03-12T21:21:25.173961Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-03-12T21:21:25.174020Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-03-12T21:21:25.228827Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '0.0.0.0' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-03-12T21:21:25.229312Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.41-0ubuntu0.24.04.1'  socket: '/var/run/mysqld/mysqld.sock'  port: 3307  (Ubuntu).
+2025-03-12T21:28:37.217590Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.41-0ubuntu0.24.04.1) starting as process 263
+2025-03-12T21:28:37.281522Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-03-12T21:28:38.157868Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-03-12T21:28:38.551550Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2025-03-12T21:28:38.584529Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2025-03-12T21:28:38.737958Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-03-12T21:28:38.738137Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-03-12T21:28:38.816940Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '0.0.0.0' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-03-12T21:28:38.818084Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.41-0ubuntu0.24.04.1'  socket: '/var/run/mysqld/mysqld.sock'  port: 3307  (Ubuntu).
+2025-03-15T23:12:19.985169Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.41-0ubuntu0.24.04.1) starting as process 273
+2025-03-15T23:12:20.017239Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-03-15T23:12:20.812953Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-03-15T23:12:21.051850Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2025-03-15T23:12:21.074409Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2025-03-15T23:12:21.194071Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-03-15T23:12:21.194130Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-03-15T23:12:21.251850Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '0.0.0.0' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-03-15T23:12:21.252416Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.41-0ubuntu0.24.04.1'  socket: '/var/run/mysqld/mysqld.sock'  port: 3307  (Ubuntu).
+2025-03-15T23:25:43.882699Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.41-0ubuntu0.24.04.1) starting as process 262
+2025-03-15T23:25:43.928157Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-03-15T23:25:44.864683Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-03-15T23:25:45.401356Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2025-03-15T23:25:45.460811Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2025-03-15T23:25:45.529554Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-03-15T23:25:45.529629Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-03-15T23:25:45.604464Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '0.0.0.0' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-03-15T23:25:45.605356Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.41-0ubuntu0.24.04.1'  socket: '/var/run/mysqld/mysqld.sock'  port: 3307  (Ubuntu).
+2025-03-16T00:29:12.848032Z 8 [Warning] [MY-013360] [Server] Plugin mysql_native_password reported: ''mysql_native_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-16T01:38:12.426358Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.41-0ubuntu0.24.04.1) starting as process 252
+2025-03-16T01:38:12.451226Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-03-16T01:38:13.008659Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-03-16T01:38:13.267254Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2025-03-16T01:38:13.290461Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2025-03-16T01:38:13.404154Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-03-16T01:38:13.404210Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-03-16T01:38:13.442737Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '0.0.0.0' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-03-16T01:38:13.442964Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.41-0ubuntu0.24.04.1'  socket: '/var/run/mysqld/mysqld.sock'  port: 3307  (Ubuntu).
+2025-03-16T01:55:54.004118Z 10 [Warning] [MY-013360] [Server] Plugin mysql_native_password reported: ''mysql_native_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'

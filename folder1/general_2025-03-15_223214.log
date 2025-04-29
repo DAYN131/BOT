@@ -1,0 +1,586 @@
+/usr/sbin/mysqld, Version: 8.0.41-0ubuntu0.24.04.1 ((Ubuntu)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2025-03-10T20:23:53.427935Z	    0 Execute	CREATE TABLE performance_schema.innodb_redo_log_files(
+`FILE_ID` BIGINT NOT NULL COMMENT 'Id of the file.',
+`FILE_NAME` VARCHAR(2000) NOT NULL COMMENT 'Path to the file.',
+`START_LSN` BIGINT NOT NULL COMMENT 'LSN of the first block in the file.',
+`END_LSN` BIGINT NOT NULL COMMENT 'LSN after the last block in the file.',
+`SIZE_IN_BYTES` BIGINT NOT NULL COMMENT 'Size of the file (in bytes).',
+`IS_FULL` TINYINT NOT NULL COMMENT '1 iff file has no free space inside.',
+`CONSUMER_LEVEL` INT NOT NULL COMMENT 'All redo log consumers registered on smaller levels than this value, have already consumed this file.'
+)engine = 'performance_schema'
+2025-03-10T20:37:00.439634Z	    8 Connect	root@localhost on  using Socket
+2025-03-10T20:37:00.448209Z	    8 Query	select @@version_comment limit 1
+2025-03-10T20:49:49.539253Z	    8 Quit	
+/usr/sbin/mysqld, Version: 8.0.41-0ubuntu0.24.04.1 ((Ubuntu)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2025-03-12T19:19:31.522434Z	    0 Execute	CREATE TABLE performance_schema.innodb_redo_log_files(
+`FILE_ID` BIGINT NOT NULL COMMENT 'Id of the file.',
+`FILE_NAME` VARCHAR(2000) NOT NULL COMMENT 'Path to the file.',
+`START_LSN` BIGINT NOT NULL COMMENT 'LSN of the first block in the file.',
+`END_LSN` BIGINT NOT NULL COMMENT 'LSN after the last block in the file.',
+`SIZE_IN_BYTES` BIGINT NOT NULL COMMENT 'Size of the file (in bytes).',
+`IS_FULL` TINYINT NOT NULL COMMENT '1 iff file has no free space inside.',
+`CONSUMER_LEVEL` INT NOT NULL COMMENT 'All redo log consumers registered on smaller levels than this value, have already consumed this file.'
+)engine = 'performance_schema'
+2025-03-12T19:19:34.538815Z	    8 Connect	web@localhost on  using TCP/IP
+2025-03-12T19:19:34.559534Z	    8 Query	SELECT CONNECTION_ID()
+2025-03-12T19:19:34.573963Z	    8 Query	SHOW VARIABLES
+2025-03-12T19:19:34.599095Z	    8 Query	SHOW /*!50002 GLOBAL */ STATUS
+2025-03-12T19:19:34.613413Z	    8 Query	SELECT NOW()
+2025-03-12T19:19:34.661711Z	    8 Query	SHOW TABLES FROM `information_schema`
+2025-03-12T19:19:34.691678Z	    8 Query	SHOW DATABASES
+2025-03-12T19:19:34.700324Z	    8 Query	SHOW OPEN TABLES FROM PuntoVenta WHERE `in_use`!=0
+2025-03-12T19:19:34.710569Z	    8 Query	USE `PuntoVenta`
+2025-03-12T19:19:34.827540Z	    8 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='PuntoVenta'
+2025-03-12T19:19:34.842785Z	    8 Query	SHOW TABLE STATUS FROM `PuntoVenta`
+2025-03-12T19:19:34.887398Z	    8 Query	SHOW FUNCTION STATUS WHERE `Db`='PuntoVenta'
+2025-03-12T19:19:34.901920Z	    8 Query	SHOW PROCEDURE STATUS WHERE `Db`='PuntoVenta'
+2025-03-12T19:19:34.920073Z	    8 Query	SHOW TRIGGERS FROM `PuntoVenta`
+2025-03-12T19:19:34.938905Z	    8 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='PuntoVenta'
+2025-03-12T19:20:18.074285Z	    8 Quit	
+2025-03-12T19:23:38.803167Z	    9 Connect	web@localhost on  using TCP/IP
+2025-03-12T19:23:38.819727Z	    9 Query	SELECT CONNECTION_ID()
+2025-03-12T19:23:38.838626Z	    9 Query	SHOW VARIABLES
+2025-03-12T19:23:38.887914Z	    9 Query	SHOW /*!50002 GLOBAL */ STATUS
+2025-03-12T19:23:38.904400Z	    9 Query	SELECT NOW()
+2025-03-12T19:23:38.933186Z	    9 Query	SHOW TABLES FROM `information_schema`
+2025-03-12T19:23:38.970075Z	    9 Query	SHOW DATABASES
+2025-03-12T19:23:38.977908Z	    9 Query	SHOW OPEN TABLES FROM PuntoVenta WHERE `in_use`!=0
+2025-03-12T19:23:38.997418Z	    9 Query	USE `PuntoVenta`
+2025-03-12T19:23:39.082889Z	    9 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='PuntoVenta'
+2025-03-12T19:23:39.091344Z	    9 Query	SHOW TABLE STATUS FROM `PuntoVenta`
+2025-03-12T19:23:39.104825Z	    9 Query	SHOW FUNCTION STATUS WHERE `Db`='PuntoVenta'
+2025-03-12T19:23:39.116865Z	    9 Query	SHOW PROCEDURE STATUS WHERE `Db`='PuntoVenta'
+2025-03-12T19:23:39.131492Z	    9 Query	SHOW TRIGGERS FROM `PuntoVenta`
+2025-03-12T19:23:39.146376Z	    9 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='PuntoVenta'
+2025-03-12T19:23:46.588778Z	    9 Query	SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='PuntoVenta' AND TABLE_NAME='categorias' ORDER BY ORDINAL_POSITION
+2025-03-12T19:23:46.631803Z	    9 Query	SHOW INDEXES FROM `categorias` FROM `PuntoVenta`
+2025-03-12T19:23:46.665089Z	    9 Query	SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='PuntoVenta'   AND TABLE_NAME='categorias'   AND REFERENCED_TABLE_NAME IS NOT NULL
+2025-03-12T19:23:46.684571Z	    9 Query	SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='PuntoVenta'   AND TABLE_NAME='categorias'   AND REFERENCED_TABLE_NAME IS NOT NULL
+2025-03-12T19:23:47.379412Z	    9 Query	SHOW COLLATION
+2025-03-12T19:23:47.586256Z	    9 Query	SHOW ENGINES
+2025-03-12T19:23:47.677851Z	    9 Query	SHOW CREATE TABLE `PuntoVenta`.`categorias`
+2025-03-12T19:23:47.728975Z	    9 Query	SELECT tc.CONSTRAINT_NAME, cc.CHECK_CLAUSE FROM `information_schema`.`CHECK_CONSTRAINTS` AS cc, `information_schema`.`TABLE_CONSTRAINTS` AS tc WHERE tc.CONSTRAINT_SCHEMA='PuntoVenta' AND tc.TABLE_NAME='categorias' AND tc.CONSTRAINT_TYPE='CHECK' AND tc.CONSTRAINT_SCHEMA=cc.CONSTRAINT_SCHEMA AND tc.CONSTRAINT_NAME=cc.CONSTRAINT_NAME
+2025-03-12T19:26:29.768044Z	    9 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='information_schema'
+2025-03-12T19:26:29.783641Z	    9 Query	SHOW TABLE STATUS FROM `information_schema`
+2025-03-12T19:26:29.813851Z	    9 Query	SHOW FUNCTION STATUS WHERE `Db`='information_schema'
+2025-03-12T19:26:29.826159Z	    9 Query	SHOW PROCEDURE STATUS WHERE `Db`='information_schema'
+2025-03-12T19:26:29.835054Z	    9 Query	SHOW TRIGGERS FROM `information_schema`
+2025-03-12T19:26:29.850464Z	    9 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='information_schema'
+2025-03-12T19:26:31.208040Z	    9 Query	USE `information_schema`
+2025-03-12T19:28:03.008731Z	    9 Query	USE `PuntoVenta`
+2025-03-12T19:28:06.811010Z	    9 Query	USE `information_schema`
+2025-03-12T19:28:36.726996Z	    9 Statistics	
+2025-03-12T19:29:10.706325Z	    9 Quit	
+2025-03-12T19:30:47.822146Z	   10 Connect	web@localhost on  using TCP/IP
+2025-03-12T19:30:47.843847Z	   10 Query	SELECT CONNECTION_ID()
+2025-03-12T19:30:47.865716Z	   10 Query	SHOW VARIABLES
+2025-03-12T19:30:47.921176Z	   10 Query	SHOW /*!50002 GLOBAL */ STATUS
+2025-03-12T19:30:47.936910Z	   10 Query	SELECT NOW()
+2025-03-12T19:30:47.964777Z	   10 Query	SHOW TABLES FROM `information_schema`
+2025-03-12T19:30:47.998923Z	   10 Query	SHOW DATABASES
+2025-03-12T19:30:48.013349Z	   10 Query	SHOW OPEN TABLES FROM information_schema WHERE `in_use`!=0
+2025-03-12T19:30:48.039612Z	   10 Query	USE `information_schema`
+2025-03-12T19:30:48.112378Z	   10 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='information_schema'
+2025-03-12T19:30:48.119105Z	   10 Query	SHOW TABLE STATUS FROM `information_schema`
+2025-03-12T19:30:48.140183Z	   10 Query	SHOW FUNCTION STATUS WHERE `Db`='information_schema'
+2025-03-12T19:30:48.150611Z	   10 Query	SHOW PROCEDURE STATUS WHERE `Db`='information_schema'
+2025-03-12T19:30:48.156963Z	   10 Query	SHOW TRIGGERS FROM `information_schema`
+2025-03-12T19:30:48.166305Z	   10 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='information_schema'
+2025-03-12T19:30:56.731611Z	   10 Query	USE `PuntoVenta`
+2025-03-12T19:30:56.783704Z	   10 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='PuntoVenta'
+2025-03-12T19:30:56.793285Z	   10 Query	SHOW TABLE STATUS FROM `PuntoVenta`
+2025-03-12T19:30:56.804110Z	   10 Query	SHOW FUNCTION STATUS WHERE `Db`='PuntoVenta'
+2025-03-12T19:30:56.816118Z	   10 Query	SHOW PROCEDURE STATUS WHERE `Db`='PuntoVenta'
+2025-03-12T19:30:56.824649Z	   10 Query	SHOW TRIGGERS FROM `PuntoVenta`
+2025-03-12T19:30:56.834568Z	   10 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='PuntoVenta'
+2025-03-12T19:31:03.746035Z	   10 Query	USE `information_schema`
+2025-03-12T19:33:47.916921Z	   10 Statistics	
+/usr/sbin/mysqld, Version: 8.0.41-0ubuntu0.24.04.1 ((Ubuntu)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2025-03-12T21:21:25.135859Z	    0 Execute	CREATE TABLE performance_schema.innodb_redo_log_files(
+`FILE_ID` BIGINT NOT NULL COMMENT 'Id of the file.',
+`FILE_NAME` VARCHAR(2000) NOT NULL COMMENT 'Path to the file.',
+`START_LSN` BIGINT NOT NULL COMMENT 'LSN of the first block in the file.',
+`END_LSN` BIGINT NOT NULL COMMENT 'LSN after the last block in the file.',
+`SIZE_IN_BYTES` BIGINT NOT NULL COMMENT 'Size of the file (in bytes).',
+`IS_FULL` TINYINT NOT NULL COMMENT '1 iff file has no free space inside.',
+`CONSUMER_LEVEL` INT NOT NULL COMMENT 'All redo log consumers registered on smaller levels than this value, have already consumed this file.'
+)engine = 'performance_schema'
+/usr/sbin/mysqld, Version: 8.0.41-0ubuntu0.24.04.1 ((Ubuntu)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2025-03-12T21:28:38.675161Z	    0 Execute	CREATE TABLE performance_schema.innodb_redo_log_files(
+`FILE_ID` BIGINT NOT NULL COMMENT 'Id of the file.',
+`FILE_NAME` VARCHAR(2000) NOT NULL COMMENT 'Path to the file.',
+`START_LSN` BIGINT NOT NULL COMMENT 'LSN of the first block in the file.',
+`END_LSN` BIGINT NOT NULL COMMENT 'LSN after the last block in the file.',
+`SIZE_IN_BYTES` BIGINT NOT NULL COMMENT 'Size of the file (in bytes).',
+`IS_FULL` TINYINT NOT NULL COMMENT '1 iff file has no free space inside.',
+`CONSUMER_LEVEL` INT NOT NULL COMMENT 'All redo log consumers registered on smaller levels than this value, have already consumed this file.'
+)engine = 'performance_schema'
+/usr/sbin/mysqld, Version: 8.0.41-0ubuntu0.24.04.1 ((Ubuntu)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2025-03-15T23:12:21.148853Z	    0 Execute	CREATE TABLE performance_schema.innodb_redo_log_files(
+`FILE_ID` BIGINT NOT NULL COMMENT 'Id of the file.',
+`FILE_NAME` VARCHAR(2000) NOT NULL COMMENT 'Path to the file.',
+`START_LSN` BIGINT NOT NULL COMMENT 'LSN of the first block in the file.',
+`END_LSN` BIGINT NOT NULL COMMENT 'LSN after the last block in the file.',
+`SIZE_IN_BYTES` BIGINT NOT NULL COMMENT 'Size of the file (in bytes).',
+`IS_FULL` TINYINT NOT NULL COMMENT '1 iff file has no free space inside.',
+`CONSUMER_LEVEL` INT NOT NULL COMMENT 'All redo log consumers registered on smaller levels than this value, have already consumed this file.'
+)engine = 'performance_schema'
+/usr/sbin/mysqld, Version: 8.0.41-0ubuntu0.24.04.1 ((Ubuntu)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2025-03-15T23:25:45.486389Z	    0 Execute	CREATE TABLE performance_schema.innodb_redo_log_files(
+`FILE_ID` BIGINT NOT NULL COMMENT 'Id of the file.',
+`FILE_NAME` VARCHAR(2000) NOT NULL COMMENT 'Path to the file.',
+`START_LSN` BIGINT NOT NULL COMMENT 'LSN of the first block in the file.',
+`END_LSN` BIGINT NOT NULL COMMENT 'LSN after the last block in the file.',
+`SIZE_IN_BYTES` BIGINT NOT NULL COMMENT 'Size of the file (in bytes).',
+`IS_FULL` TINYINT NOT NULL COMMENT '1 iff file has no free space inside.',
+`CONSUMER_LEVEL` INT NOT NULL COMMENT 'All redo log consumers registered on smaller levels than this value, have already consumed this file.'
+)engine = 'performance_schema'
+2025-03-16T00:29:12.866434Z	    8 Connect	web@localhost on  using SSL/TLS
+2025-03-16T00:29:12.932094Z	    8 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T00:29:12.963806Z	    8 Query	set autocommit=0
+2025-03-16T00:29:40.146627Z	    9 Connect	web@localhost on  using TCP/IP
+2025-03-16T00:29:40.187869Z	    9 Query	SELECT CONNECTION_ID()
+2025-03-16T00:29:40.238029Z	    9 Query	SHOW VARIABLES
+2025-03-16T00:29:40.678451Z	    9 Query	SHOW /*!50002 GLOBAL */ STATUS
+2025-03-16T00:29:40.721289Z	    9 Query	SELECT NOW()
+2025-03-16T00:29:40.747281Z	    9 Query	SHOW TABLES FROM `information_schema`
+2025-03-16T00:29:40.875534Z	    9 Query	SHOW DATABASES
+2025-03-16T00:29:40.897975Z	    9 Query	SHOW OPEN TABLES FROM information_schema WHERE `in_use`!=0
+2025-03-16T00:29:40.913903Z	    9 Query	USE `information_schema`
+2025-03-16T00:29:40.945386Z	    9 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='information_schema'
+2025-03-16T00:29:40.949276Z	    9 Query	SHOW TABLE STATUS FROM `information_schema`
+2025-03-16T00:29:40.968445Z	    9 Query	SHOW FUNCTION STATUS WHERE `Db`='information_schema'
+2025-03-16T00:29:40.997647Z	    9 Query	SHOW PROCEDURE STATUS WHERE `Db`='information_schema'
+2025-03-16T00:29:41.002567Z	    9 Query	SHOW TRIGGERS FROM `information_schema`
+2025-03-16T00:29:41.010548Z	    9 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='information_schema'
+2025-03-16T00:29:43.606668Z	    9 Query	USE `PuntoVenta`
+2025-03-16T00:29:43.657752Z	    9 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='PuntoVenta'
+2025-03-16T00:29:43.668039Z	    9 Query	SHOW TABLE STATUS FROM `PuntoVenta`
+2025-03-16T00:29:43.805354Z	    9 Query	SHOW FUNCTION STATUS WHERE `Db`='PuntoVenta'
+2025-03-16T00:29:43.815657Z	    9 Query	SHOW PROCEDURE STATUS WHERE `Db`='PuntoVenta'
+2025-03-16T00:29:43.825795Z	    9 Query	SHOW TRIGGERS FROM `PuntoVenta`
+2025-03-16T00:29:43.835701Z	    9 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='PuntoVenta'
+2025-03-16T00:29:47.679852Z	    9 Query	SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='PuntoVenta' AND TABLE_NAME='clientes' ORDER BY ORDINAL_POSITION
+2025-03-16T00:29:47.719366Z	    9 Query	SHOW INDEXES FROM `clientes` FROM `PuntoVenta`
+2025-03-16T00:29:47.754247Z	    9 Query	SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='PuntoVenta'   AND TABLE_NAME='clientes'   AND REFERENCED_TABLE_NAME IS NOT NULL
+2025-03-16T00:29:47.767193Z	    9 Query	SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='PuntoVenta'   AND TABLE_NAME='clientes'   AND REFERENCED_TABLE_NAME IS NOT NULL
+2025-03-16T00:29:47.989193Z	    9 Query	SHOW COLLATION
+2025-03-16T00:29:48.097389Z	    9 Query	SHOW ENGINES
+2025-03-16T00:29:48.131490Z	    9 Query	SHOW CREATE TABLE `PuntoVenta`.`clientes`
+2025-03-16T00:29:48.193268Z	    9 Query	SELECT tc.CONSTRAINT_NAME, cc.CHECK_CLAUSE FROM `information_schema`.`CHECK_CONSTRAINTS` AS cc, `information_schema`.`TABLE_CONSTRAINTS` AS tc WHERE tc.CONSTRAINT_SCHEMA='PuntoVenta' AND tc.TABLE_NAME='clientes' AND tc.CONSTRAINT_TYPE='CHECK' AND tc.CONSTRAINT_SCHEMA=cc.CONSTRAINT_SCHEMA AND tc.CONSTRAINT_NAME=cc.CONSTRAINT_NAME
+2025-03-16T00:29:51.331491Z	    9 Query	SELECT * FROM `PuntoVenta`.`clientes` LIMIT 1000
+2025-03-16T00:30:32.728649Z	   10 Connect	web@localhost on  using SSL/TLS
+2025-03-16T00:30:32.730391Z	   10 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T00:30:32.742288Z	   10 Query	set autocommit=0
+2025-03-16T00:30:37.004944Z	   10 Quit	
+2025-03-16T00:31:42.172873Z	   11 Connect	web@localhost on  using SSL/TLS
+2025-03-16T00:31:42.174518Z	   11 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T00:31:42.177706Z	   11 Query	set autocommit=0
+2025-03-16T00:31:43.172332Z	   11 Quit	
+2025-03-16T00:31:53.008798Z	   12 Connect	web@localhost on  using SSL/TLS
+2025-03-16T00:31:53.010468Z	   12 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T00:31:53.011960Z	   12 Query	set autocommit=0
+2025-03-16T00:31:54.769182Z	   12 Quit	
+2025-03-16T00:32:42.852193Z	    9 Statistics	
+2025-03-16T00:34:47.407524Z	   13 Connect	web@localhost on  using SSL/TLS
+2025-03-16T00:34:47.409272Z	   13 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T00:34:47.411795Z	   13 Query	set autocommit=0
+2025-03-16T00:34:47.860518Z	   14 Connect	web@localhost on  using SSL/TLS
+2025-03-16T00:34:47.861453Z	   14 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T00:34:47.861973Z	   14 Query	set autocommit=0
+2025-03-16T00:34:51.047941Z	   13 Quit	
+2025-03-16T00:34:52.143207Z	   14 Quit	
+2025-03-16T00:37:21.651998Z	   15 Connect	web@localhost on  using SSL/TLS
+2025-03-16T00:37:21.655212Z	   15 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T00:37:21.656678Z	   15 Query	set autocommit=0
+2025-03-16T00:37:22.837872Z	   15 Quit	
+2025-03-16T00:38:15.717423Z	   16 Connect	web@localhost on  using SSL/TLS
+2025-03-16T00:38:15.719236Z	   16 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T00:38:15.721208Z	   16 Query	set autocommit=0
+2025-03-16T00:38:16.050792Z	   16 Quit	
+2025-03-16T01:02:21.596513Z	    9 Statistics	
+2025-03-16T01:02:25.920915Z	    9 Quit	
+/usr/sbin/mysqld, Version: 8.0.41-0ubuntu0.24.04.1 ((Ubuntu)). started with:
+Tcp port: 3307  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2025-03-16T01:38:13.365686Z	    0 Execute	CREATE TABLE performance_schema.innodb_redo_log_files(
+`FILE_ID` BIGINT NOT NULL COMMENT 'Id of the file.',
+`FILE_NAME` VARCHAR(2000) NOT NULL COMMENT 'Path to the file.',
+`START_LSN` BIGINT NOT NULL COMMENT 'LSN of the first block in the file.',
+`END_LSN` BIGINT NOT NULL COMMENT 'LSN after the last block in the file.',
+`SIZE_IN_BYTES` BIGINT NOT NULL COMMENT 'Size of the file (in bytes).',
+`IS_FULL` TINYINT NOT NULL COMMENT '1 iff file has no free space inside.',
+`CONSUMER_LEVEL` INT NOT NULL COMMENT 'All redo log consumers registered on smaller levels than this value, have already consumed this file.'
+)engine = 'performance_schema'
+2025-03-16T01:55:20.763795Z	    9 Connect	root@localhost on  using Socket
+2025-03-16T01:55:20.787931Z	    9 Query	select @@version_comment limit 1
+2025-03-16T01:55:28.446851Z	    9 Query	SHOW GRANTS FOR 'web'@'localhost'
+2025-03-16T01:55:54.007857Z	   10 Connect	web@localhost on  using Socket
+2025-03-16T01:55:54.014318Z	   10 Query	select @@version_comment limit 1
+2025-03-16T01:57:35.670814Z	   11 Connect	root@localhost on  using Socket
+2025-03-16T01:57:35.671596Z	   11 Query	select @@version_comment limit 1
+2025-03-16T01:57:36.921056Z	   11 Query	SHOW GRANTS FOR 'web'@'localhost'
+2025-03-16T01:58:30.313563Z	   11 Query	GRANT ALL PRIVILEGES ON *.* TO 'web'@'%' WITH GRANT OPTION
+2025-03-16T01:58:38.139894Z	   11 Query	FLUSH PRIVILEGES
+2025-03-16T01:58:46.626800Z	    9 Quit	
+2025-03-16T02:02:19.814134Z	   10 Quit	
+2025-03-16T02:02:21.770365Z	   11 Quit	
+2025-03-16T02:02:35.902745Z	   14 Connect	root@localhost on  using Socket
+2025-03-16T02:02:35.906765Z	   14 Query	select @@version_comment limit 1
+2025-03-16T02:02:37.988852Z	   14 Query	SHOW VARIABLES LIKE '%ssl%'
+2025-03-16T02:04:35.007083Z	   15 Connect	web@localhost on  using Socket
+2025-03-16T02:04:35.009194Z	   15 Query	/*!40100 SET @@SQL_MODE='' */
+2025-03-16T02:04:35.010723Z	   15 Query	/*!40103 SET TIME_ZONE='+00:00' */
+2025-03-16T02:04:35.012348Z	   15 Query	/*!80000 SET SESSION information_schema_stats_expiry=0 */
+2025-03-16T02:04:35.013299Z	   15 Query	SET SESSION NET_READ_TIMEOUT= 86400, SESSION NET_WRITE_TIMEOUT= 86400
+2025-03-16T02:04:35.018000Z	   15 Query	SHOW VARIABLES LIKE 'gtid_mode'
+2025-03-16T02:04:35.044131Z	   15 Query	SELECT LOGFILE_GROUP_NAME, FILE_NAME, TOTAL_EXTENTS, INITIAL_SIZE, ENGINE, EXTRA FROM INFORMATION_SCHEMA.FILES WHERE ENGINE = 'ndbcluster' AND FILE_TYPE = 'UNDO LOG' AND FILE_NAME IS NOT NULL AND LOGFILE_GROUP_NAME IS NOT NULL AND LOGFILE_GROUP_NAME IN (SELECT DISTINCT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE ENGINE = 'ndbcluster' AND FILE_TYPE = 'DATAFILE' AND TABLESPACE_NAME IN (SELECT DISTINCT TABLESPACE_NAME FROM INFORMATION_SCHEMA.PARTITIONS WHERE TABLE_SCHEMA IN ('PuntoVenta'))) GROUP BY LOGFILE_GROUP_NAME, FILE_NAME, ENGINE, TOTAL_EXTENTS, INITIAL_SIZE ORDER BY LOGFILE_GROUP_NAME
+2025-03-16T02:04:35.092804Z	   15 Query	SELECT DISTINCT TABLESPACE_NAME, FILE_NAME, LOGFILE_GROUP_NAME, EXTENT_SIZE, INITIAL_SIZE, ENGINE FROM INFORMATION_SCHEMA.FILES WHERE FILE_TYPE = 'DATAFILE' AND TABLESPACE_NAME IN (SELECT DISTINCT TABLESPACE_NAME FROM INFORMATION_SCHEMA.PARTITIONS WHERE TABLE_SCHEMA IN ('PuntoVenta')) ORDER BY TABLESPACE_NAME, LOGFILE_GROUP_NAME
+2025-03-16T02:04:35.095764Z	   15 Query	SHOW VARIABLES LIKE 'ndbinfo\_version'
+2025-03-16T02:04:35.099693Z	   15 Init DB	PuntoVenta
+2025-03-16T02:04:35.100295Z	   15 Query	show tables
+2025-03-16T02:04:35.111034Z	   15 Query	LOCK TABLES `categorias` READ /*!32311 LOCAL */,`clientes` READ /*!32311 LOCAL */,`detalles_ventas` READ /*!32311 LOCAL */,`empleados` READ /*!32311 LOCAL */,`metodos_pago` READ /*!32311 LOCAL */,`productos` READ /*!32311 LOCAL */,`ventas` READ /*!32311 LOCAL */
+2025-03-16T02:04:35.135584Z	   15 Query	show table status like 'categorias'
+2025-03-16T02:04:35.137986Z	   15 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T02:04:35.138335Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.138700Z	   15 Query	show create table `categorias`
+2025-03-16T02:04:35.140340Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.141977Z	   15 Query	show fields from `categorias`
+2025-03-16T02:04:35.150750Z	   15 Query	show fields from `categorias`
+2025-03-16T02:04:35.156226Z	   15 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `categorias`
+2025-03-16T02:04:35.164569Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.165120Z	   15 Query	use `PuntoVenta`
+2025-03-16T02:04:35.165505Z	   15 Query	select @@collation_database
+2025-03-16T02:04:35.165891Z	   15 Query	SHOW TRIGGERS LIKE 'categorias'
+2025-03-16T02:04:35.168833Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.169219Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.169688Z	   15 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'categorias'
+2025-03-16T02:04:35.171621Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.172489Z	   15 Query	show table status like 'clientes'
+2025-03-16T02:04:35.173930Z	   15 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T02:04:35.174223Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.174496Z	   15 Query	show create table `clientes`
+2025-03-16T02:04:35.174756Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.176346Z	   15 Query	show fields from `clientes`
+2025-03-16T02:04:35.177633Z	   15 Query	show fields from `clientes`
+2025-03-16T02:04:35.179396Z	   15 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `clientes`
+2025-03-16T02:04:35.191774Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.192334Z	   15 Query	use `PuntoVenta`
+2025-03-16T02:04:35.192765Z	   15 Query	select @@collation_database
+2025-03-16T02:04:35.193292Z	   15 Query	SHOW TRIGGERS LIKE 'clientes'
+2025-03-16T02:04:35.194930Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.195616Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.195989Z	   15 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'clientes'
+2025-03-16T02:04:35.196550Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.196837Z	   15 Query	show table status like 'detalles\_ventas'
+2025-03-16T02:04:35.197721Z	   15 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T02:04:35.197984Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.198122Z	   15 Query	show create table `detalles_ventas`
+2025-03-16T02:04:35.198537Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.200133Z	   15 Query	show fields from `detalles_ventas`
+2025-03-16T02:04:35.201583Z	   15 Query	show fields from `detalles_ventas`
+2025-03-16T02:04:35.204116Z	   15 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `detalles_ventas`
+2025-03-16T02:04:35.211907Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.212618Z	   15 Query	use `PuntoVenta`
+2025-03-16T02:04:35.213180Z	   15 Query	select @@collation_database
+2025-03-16T02:04:35.213767Z	   15 Query	SHOW TRIGGERS LIKE 'detalles\_ventas'
+2025-03-16T02:04:35.215915Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.216495Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.217057Z	   15 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'detalles_ventas'
+2025-03-16T02:04:35.217706Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.218213Z	   15 Query	show table status like 'empleados'
+2025-03-16T02:04:35.219822Z	   15 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T02:04:35.220349Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.220962Z	   15 Query	show create table `empleados`
+2025-03-16T02:04:35.221809Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.224269Z	   15 Query	show fields from `empleados`
+2025-03-16T02:04:35.226574Z	   15 Query	show fields from `empleados`
+2025-03-16T02:04:35.228572Z	   15 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `empleados`
+2025-03-16T02:04:35.240162Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.240793Z	   15 Query	use `PuntoVenta`
+2025-03-16T02:04:35.240983Z	   15 Query	select @@collation_database
+2025-03-16T02:04:35.241200Z	   15 Query	SHOW TRIGGERS LIKE 'empleados'
+2025-03-16T02:04:35.242962Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.243614Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.244251Z	   15 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'empleados'
+2025-03-16T02:04:35.244906Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.245481Z	   15 Query	show table status like 'metodos\_pago'
+2025-03-16T02:04:35.247235Z	   15 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T02:04:35.247723Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.248035Z	   15 Query	show create table `metodos_pago`
+2025-03-16T02:04:35.248715Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.250089Z	   15 Query	show fields from `metodos_pago`
+2025-03-16T02:04:35.252129Z	   15 Query	show fields from `metodos_pago`
+2025-03-16T02:04:35.254172Z	   15 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `metodos_pago`
+2025-03-16T02:04:35.259030Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.259495Z	   15 Query	use `PuntoVenta`
+2025-03-16T02:04:35.259745Z	   15 Query	select @@collation_database
+2025-03-16T02:04:35.260131Z	   15 Query	SHOW TRIGGERS LIKE 'metodos\_pago'
+2025-03-16T02:04:35.261419Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.261948Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.262428Z	   15 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'metodos_pago'
+2025-03-16T02:04:35.263066Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.263439Z	   15 Query	show table status like 'productos'
+2025-03-16T02:04:35.265253Z	   15 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T02:04:35.265644Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.266060Z	   15 Query	show create table `productos`
+2025-03-16T02:04:35.266347Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.267564Z	   15 Query	show fields from `productos`
+2025-03-16T02:04:35.268357Z	   15 Query	show fields from `productos`
+2025-03-16T02:04:35.270969Z	   15 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `productos`
+2025-03-16T02:04:35.284376Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.284725Z	   15 Query	use `PuntoVenta`
+2025-03-16T02:04:35.285046Z	   15 Query	select @@collation_database
+2025-03-16T02:04:35.285430Z	   15 Query	SHOW TRIGGERS LIKE 'productos'
+2025-03-16T02:04:35.286894Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.287299Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.287796Z	   15 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'productos'
+2025-03-16T02:04:35.288667Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.289651Z	   15 Query	show table status like 'ventas'
+2025-03-16T02:04:35.293179Z	   15 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T02:04:35.293641Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.294008Z	   15 Query	show create table `ventas`
+2025-03-16T02:04:35.294491Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.295984Z	   15 Query	show fields from `ventas`
+2025-03-16T02:04:35.297884Z	   15 Query	show fields from `ventas`
+2025-03-16T02:04:35.301103Z	   15 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `ventas`
+2025-03-16T02:04:35.309407Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.309858Z	   15 Query	use `PuntoVenta`
+2025-03-16T02:04:35.310240Z	   15 Query	select @@collation_database
+2025-03-16T02:04:35.310672Z	   15 Query	SHOW TRIGGERS LIKE 'ventas'
+2025-03-16T02:04:35.312514Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.312866Z	   15 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T02:04:35.313197Z	   15 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'ventas'
+2025-03-16T02:04:35.313711Z	   15 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T02:04:35.313988Z	   15 Query	UNLOCK TABLES
+2025-03-16T02:04:35.316839Z	   15 Quit	
+2025-03-16T02:07:11.984877Z	   18 Connect	root@localhost on  using Socket
+2025-03-16T02:07:11.986748Z	   18 Query	select @@version_comment limit 1
+2025-03-16T02:07:12.995429Z	   18 Query	SHOW VARIABLES LIKE '%ssl%'
+2025-03-16T02:09:47.365270Z	   18 Quit	
+2025-03-16T02:09:47.384166Z	   14 Quit	
+2025-03-16T02:10:53.911894Z	   19 Connect	web@localhost on PuntoVenta using SSL/TLS
+2025-03-16T02:10:53.913716Z	   19 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T02:10:53.914895Z	   19 Query	set autocommit=0
+2025-03-16T02:10:53.916477Z	   19 Query	SELECT * FROM clientes
+2025-03-16T02:10:53.921759Z	   19 Query	INSERT INTO clientes (nombre, email, telefono) VALUES ('Mau Sandoval', 'mau_sandoval@email.com', '5512345678')
+2025-03-16T02:10:53.939084Z	   19 Query	commit
+2025-03-16T02:10:53.958025Z	   19 Quit	
+2025-03-16T02:14:04.190164Z	   21 Connect	web@localhost on  using SSL/TLS
+2025-03-16T02:14:04.190910Z	   20 Connect	web@localhost on  using SSL/TLS
+2025-03-16T02:14:04.192259Z	   21 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T02:14:04.194608Z	   21 Query	set autocommit=0
+2025-03-16T02:14:04.952753Z	   21 Quit	
+2025-03-16T02:16:36.700737Z	   22 Connect	web@localhost on  using SSL/TLS
+2025-03-16T02:16:36.702192Z	   22 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T02:16:36.702757Z	   22 Query	set autocommit=0
+2025-03-16T02:16:37.384107Z	   22 Quit	
+2025-03-16T02:23:21.976024Z	   23 Connect	web@localhost on  using SSL/TLS
+2025-03-16T02:23:21.981881Z	   23 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T02:23:21.985923Z	   23 Query	set autocommit=0
+2025-03-16T02:23:23.438024Z	   23 Quit	
+2025-03-16T02:25:03.210756Z	   24 Connect	root@localhost on  using Socket
+2025-03-16T02:25:03.221115Z	   24 Query	select @@version_comment limit 1
+2025-03-16T02:25:04.366097Z	   24 Query	SHOW DATABASES
+2025-03-16T02:30:04.409217Z	   26 Connect	web@localhost on PuntoVenta using SSL/TLS
+2025-03-16T02:30:04.409504Z	   25 Connect	web@localhost on PuntoVenta using SSL/TLS
+2025-03-16T02:30:04.424663Z	   26 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T02:30:04.424807Z	   25 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T02:30:04.427597Z	   26 Query	set autocommit=0
+2025-03-16T02:30:04.428862Z	   26 Query	SELECT * FROM clientes
+2025-03-16T02:30:04.428885Z	   25 Query	set autocommit=0
+2025-03-16T02:30:04.430044Z	   25 Query	SELECT * FROM clientes
+2025-03-16T02:30:05.387646Z	   26 Quit	
+2025-03-16T02:30:05.479700Z	   25 Quit	
+2025-03-16T02:30:52.391253Z	   27 Connect	web@localhost on PuntoVenta using SSL/TLS
+2025-03-16T02:30:52.392139Z	   27 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T02:30:52.404196Z	   27 Query	set autocommit=0
+2025-03-16T02:30:52.405655Z	   27 Query	SELECT * FROM clientes
+2025-03-16T02:30:53.003620Z	   27 Quit	
+2025-03-16T03:34:54.900602Z	   24 Quit	
+2025-03-16T03:36:54.419438Z	   28 Connect	web@localhost on PuntoVenta using SSL/TLS
+2025-03-16T03:36:54.432886Z	   28 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T03:36:54.438170Z	   28 Query	set autocommit=0
+2025-03-16T03:36:54.448308Z	   28 Query	INSERT INTO clientes (nombre, email, telefono) VALUES ('Carolina Herrera', 'carolina@example.com', '987654321')
+2025-03-16T03:36:54.484850Z	   28 Query	commit
+2025-03-16T03:36:55.172911Z	   28 Quit	
+2025-03-16T03:40:11.533814Z	   29 Connect	web@localhost on PuntoVenta using SSL/TLS
+2025-03-16T03:40:11.538945Z	   29 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T03:40:11.540912Z	   29 Query	set autocommit=0
+2025-03-16T03:40:11.543797Z	   29 Query	SELECT * FROM clientes
+2025-03-16T03:40:12.128208Z	   29 Quit	
+2025-03-16T03:40:38.179234Z	   30 Connect	web@localhost on  using TCP/IP
+2025-03-16T03:40:38.201721Z	   30 Query	SELECT CONNECTION_ID()
+2025-03-16T03:40:38.214729Z	   30 Query	SHOW VARIABLES
+2025-03-16T03:40:38.334290Z	   30 Query	SHOW /*!50002 GLOBAL */ STATUS
+2025-03-16T03:40:38.474036Z	   30 Query	SELECT NOW()
+2025-03-16T03:40:38.502752Z	   30 Query	SHOW TABLES FROM `information_schema`
+2025-03-16T03:40:38.592656Z	   30 Query	SHOW DATABASES
+2025-03-16T03:40:38.606769Z	   30 Query	SHOW OPEN TABLES FROM PuntoVenta WHERE `in_use`!=0
+2025-03-16T03:40:38.632387Z	   30 Query	USE `PuntoVenta`
+2025-03-16T03:40:38.707982Z	   30 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='PuntoVenta'
+2025-03-16T03:40:38.713966Z	   30 Query	SHOW TABLE STATUS FROM `PuntoVenta`
+2025-03-16T03:40:38.736860Z	   30 Query	SHOW FUNCTION STATUS WHERE `Db`='PuntoVenta'
+2025-03-16T03:40:38.821259Z	   30 Query	SHOW PROCEDURE STATUS WHERE `Db`='PuntoVenta'
+2025-03-16T03:40:38.828068Z	   30 Query	SHOW TRIGGERS FROM `PuntoVenta`
+2025-03-16T03:40:38.842177Z	   30 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='PuntoVenta'
+2025-03-16T03:40:42.234135Z	   30 Query	SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='PuntoVenta' AND TABLE_NAME='categorias' ORDER BY ORDINAL_POSITION
+2025-03-16T03:40:42.281234Z	   30 Query	SHOW INDEXES FROM `categorias` FROM `PuntoVenta`
+2025-03-16T03:40:42.331810Z	   30 Query	SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='PuntoVenta'   AND TABLE_NAME='categorias'   AND REFERENCED_TABLE_NAME IS NOT NULL
+2025-03-16T03:40:42.343377Z	   30 Query	SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='PuntoVenta'   AND TABLE_NAME='categorias'   AND REFERENCED_TABLE_NAME IS NOT NULL
+2025-03-16T03:40:42.696312Z	   30 Query	SHOW COLLATION
+2025-03-16T03:40:42.978012Z	   30 Query	SHOW ENGINES
+2025-03-16T03:40:43.155596Z	   30 Query	SHOW CREATE TABLE `PuntoVenta`.`categorias`
+2025-03-16T03:40:43.178745Z	   30 Query	SELECT tc.CONSTRAINT_NAME, cc.CHECK_CLAUSE FROM `information_schema`.`CHECK_CONSTRAINTS` AS cc, `information_schema`.`TABLE_CONSTRAINTS` AS tc WHERE tc.CONSTRAINT_SCHEMA='PuntoVenta' AND tc.TABLE_NAME='categorias' AND tc.CONSTRAINT_TYPE='CHECK' AND tc.CONSTRAINT_SCHEMA=cc.CONSTRAINT_SCHEMA AND tc.CONSTRAINT_NAME=cc.CONSTRAINT_NAME
+2025-03-16T03:41:05.666284Z	   31 Connect	web@localhost on PuntoVenta using SSL/TLS
+2025-03-16T03:41:05.667457Z	   31 Query	SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
+2025-03-16T03:41:05.667913Z	   31 Query	set autocommit=0
+2025-03-16T03:41:05.669072Z	   31 Query	SELECT * FROM categorias
+2025-03-16T03:41:06.136026Z	   31 Quit	
+2025-03-16T03:42:13.341122Z	   30 Statistics	
+2025-03-16T03:42:15.503509Z	   30 Query	SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='PuntoVenta' AND TABLE_NAME='clientes' ORDER BY ORDINAL_POSITION
+2025-03-16T03:42:15.529292Z	   30 Query	SHOW INDEXES FROM `clientes` FROM `PuntoVenta`
+2025-03-16T03:42:15.546113Z	   30 Query	SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='PuntoVenta'   AND TABLE_NAME='clientes'   AND REFERENCED_TABLE_NAME IS NOT NULL
+2025-03-16T03:42:15.559158Z	   30 Query	SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='PuntoVenta'   AND TABLE_NAME='clientes'   AND REFERENCED_TABLE_NAME IS NOT NULL
+2025-03-16T03:42:15.758990Z	   30 Query	SHOW CREATE TABLE `PuntoVenta`.`clientes`
+2025-03-16T03:42:15.764859Z	   30 Query	SELECT tc.CONSTRAINT_NAME, cc.CHECK_CLAUSE FROM `information_schema`.`CHECK_CONSTRAINTS` AS cc, `information_schema`.`TABLE_CONSTRAINTS` AS tc WHERE tc.CONSTRAINT_SCHEMA='PuntoVenta' AND tc.TABLE_NAME='clientes' AND tc.CONSTRAINT_TYPE='CHECK' AND tc.CONSTRAINT_SCHEMA=cc.CONSTRAINT_SCHEMA AND tc.CONSTRAINT_NAME=cc.CONSTRAINT_NAME
+2025-03-16T03:42:18.282140Z	   30 Query	SELECT * FROM `PuntoVenta`.`clientes` LIMIT 1000
+2025-03-16T03:44:18.037992Z	   30 Statistics	
+2025-03-16T03:51:41.141824Z	   32 Connect	web@localhost on  using Socket
+2025-03-16T03:51:41.156063Z	   32 Query	/*!40100 SET @@SQL_MODE='' */
+2025-03-16T03:51:41.163538Z	   32 Query	/*!40103 SET TIME_ZONE='+00:00' */
+2025-03-16T03:51:41.166266Z	   32 Query	/*!80000 SET SESSION information_schema_stats_expiry=0 */
+2025-03-16T03:51:41.169416Z	   32 Query	SET SESSION NET_READ_TIMEOUT= 86400, SESSION NET_WRITE_TIMEOUT= 86400
+2025-03-16T03:51:41.177068Z	   32 Query	SHOW VARIABLES LIKE 'gtid_mode'
+2025-03-16T03:51:41.280594Z	   32 Query	SELECT LOGFILE_GROUP_NAME, FILE_NAME, TOTAL_EXTENTS, INITIAL_SIZE, ENGINE, EXTRA FROM INFORMATION_SCHEMA.FILES WHERE ENGINE = 'ndbcluster' AND FILE_TYPE = 'UNDO LOG' AND FILE_NAME IS NOT NULL AND LOGFILE_GROUP_NAME IS NOT NULL AND LOGFILE_GROUP_NAME IN (SELECT DISTINCT LOGFILE_GROUP_NAME FROM INFORMATION_SCHEMA.FILES WHERE ENGINE = 'ndbcluster' AND FILE_TYPE = 'DATAFILE' AND TABLESPACE_NAME IN (SELECT DISTINCT TABLESPACE_NAME FROM INFORMATION_SCHEMA.PARTITIONS WHERE TABLE_SCHEMA IN ('PuntoVenta'))) GROUP BY LOGFILE_GROUP_NAME, FILE_NAME, ENGINE, TOTAL_EXTENTS, INITIAL_SIZE ORDER BY LOGFILE_GROUP_NAME
+2025-03-16T03:51:41.335028Z	   32 Query	SELECT DISTINCT TABLESPACE_NAME, FILE_NAME, LOGFILE_GROUP_NAME, EXTENT_SIZE, INITIAL_SIZE, ENGINE FROM INFORMATION_SCHEMA.FILES WHERE FILE_TYPE = 'DATAFILE' AND TABLESPACE_NAME IN (SELECT DISTINCT TABLESPACE_NAME FROM INFORMATION_SCHEMA.PARTITIONS WHERE TABLE_SCHEMA IN ('PuntoVenta')) ORDER BY TABLESPACE_NAME, LOGFILE_GROUP_NAME
+2025-03-16T03:51:41.341755Z	   32 Query	SHOW VARIABLES LIKE 'ndbinfo\_version'
+2025-03-16T03:51:41.344650Z	   32 Init DB	PuntoVenta
+2025-03-16T03:51:41.345524Z	   32 Query	show tables
+2025-03-16T03:51:41.350836Z	   32 Query	LOCK TABLES `categorias` READ /*!32311 LOCAL */,`clientes` READ /*!32311 LOCAL */,`detalles_ventas` READ /*!32311 LOCAL */,`empleados` READ /*!32311 LOCAL */,`metodos_pago` READ /*!32311 LOCAL */,`productos` READ /*!32311 LOCAL */,`ventas` READ /*!32311 LOCAL */
+2025-03-16T03:51:41.364334Z	   32 Query	show table status like 'categorias'
+2025-03-16T03:51:41.369113Z	   32 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T03:51:41.369636Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.370088Z	   32 Query	show create table `categorias`
+2025-03-16T03:51:41.372145Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.374461Z	   32 Query	show fields from `categorias`
+2025-03-16T03:51:41.384448Z	   32 Query	show fields from `categorias`
+2025-03-16T03:51:41.388058Z	   32 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `categorias`
+2025-03-16T03:51:41.391999Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.392474Z	   32 Query	use `PuntoVenta`
+2025-03-16T03:51:41.393178Z	   32 Query	select @@collation_database
+2025-03-16T03:51:41.394904Z	   32 Query	SHOW TRIGGERS LIKE 'categorias'
+2025-03-16T03:51:41.400212Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.400793Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.402477Z	   32 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'categorias'
+2025-03-16T03:51:41.409044Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.409601Z	   32 Query	show table status like 'clientes'
+2025-03-16T03:51:41.411619Z	   32 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T03:51:41.411844Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.412082Z	   32 Query	show create table `clientes`
+2025-03-16T03:51:41.412945Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.414457Z	   32 Query	show fields from `clientes`
+2025-03-16T03:51:41.416784Z	   32 Query	show fields from `clientes`
+2025-03-16T03:51:41.418426Z	   32 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `clientes`
+2025-03-16T03:51:41.426633Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.427058Z	   32 Query	use `PuntoVenta`
+2025-03-16T03:51:41.427429Z	   32 Query	select @@collation_database
+2025-03-16T03:51:41.427798Z	   32 Query	SHOW TRIGGERS LIKE 'clientes'
+2025-03-16T03:51:41.428937Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.429254Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.429646Z	   32 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'clientes'
+2025-03-16T03:51:41.430173Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.430491Z	   32 Query	show table status like 'detalles\_ventas'
+2025-03-16T03:51:41.431759Z	   32 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T03:51:41.432194Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.432607Z	   32 Query	show create table `detalles_ventas`
+2025-03-16T03:51:41.433105Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.434112Z	   32 Query	show fields from `detalles_ventas`
+2025-03-16T03:51:41.436126Z	   32 Query	show fields from `detalles_ventas`
+2025-03-16T03:51:41.437681Z	   32 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `detalles_ventas`
+2025-03-16T03:51:41.442607Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.443079Z	   32 Query	use `PuntoVenta`
+2025-03-16T03:51:41.443541Z	   32 Query	select @@collation_database
+2025-03-16T03:51:41.443953Z	   32 Query	SHOW TRIGGERS LIKE 'detalles\_ventas'
+2025-03-16T03:51:41.445044Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.445479Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.445910Z	   32 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'detalles_ventas'
+2025-03-16T03:51:41.446426Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.446861Z	   32 Query	show table status like 'empleados'
+2025-03-16T03:51:41.447889Z	   32 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T03:51:41.448294Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.448700Z	   32 Query	show create table `empleados`
+2025-03-16T03:51:41.449382Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.450454Z	   32 Query	show fields from `empleados`
+2025-03-16T03:51:41.451642Z	   32 Query	show fields from `empleados`
+2025-03-16T03:51:41.453228Z	   32 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `empleados`
+2025-03-16T03:51:41.463171Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.463566Z	   32 Query	use `PuntoVenta`
+2025-03-16T03:51:41.464178Z	   32 Query	select @@collation_database
+2025-03-16T03:51:41.464651Z	   32 Query	SHOW TRIGGERS LIKE 'empleados'
+2025-03-16T03:51:41.465815Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.466243Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.466692Z	   32 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'empleados'
+2025-03-16T03:51:41.467316Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.467766Z	   32 Query	show table status like 'metodos\_pago'
+2025-03-16T03:51:41.468803Z	   32 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T03:51:41.469167Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.469598Z	   32 Query	show create table `metodos_pago`
+2025-03-16T03:51:41.470187Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.471335Z	   32 Query	show fields from `metodos_pago`
+2025-03-16T03:51:41.472318Z	   32 Query	show fields from `metodos_pago`
+2025-03-16T03:51:41.474183Z	   32 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `metodos_pago`
+2025-03-16T03:51:41.475872Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.476339Z	   32 Query	use `PuntoVenta`
+2025-03-16T03:51:41.476846Z	   32 Query	select @@collation_database
+2025-03-16T03:51:41.477380Z	   32 Query	SHOW TRIGGERS LIKE 'metodos\_pago'
+2025-03-16T03:51:41.478746Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.479209Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.479675Z	   32 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'metodos_pago'
+2025-03-16T03:51:41.480220Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.480665Z	   32 Query	show table status like 'productos'
+2025-03-16T03:51:41.481702Z	   32 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T03:51:41.482132Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.482563Z	   32 Query	show create table `productos`
+2025-03-16T03:51:41.483082Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.484555Z	   32 Query	show fields from `productos`
+2025-03-16T03:51:41.485397Z	   32 Query	show fields from `productos`
+2025-03-16T03:51:41.487271Z	   32 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `productos`
+2025-03-16T03:51:41.495559Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.496085Z	   32 Query	use `PuntoVenta`
+2025-03-16T03:51:41.496493Z	   32 Query	select @@collation_database
+2025-03-16T03:51:41.496847Z	   32 Query	SHOW TRIGGERS LIKE 'productos'
+2025-03-16T03:51:41.497826Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.498156Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.498570Z	   32 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'productos'
+2025-03-16T03:51:41.498964Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.499292Z	   32 Query	show table status like 'ventas'
+2025-03-16T03:51:41.500231Z	   32 Query	SET SQL_QUOTE_SHOW_CREATE=1
+2025-03-16T03:51:41.500449Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.500821Z	   32 Query	show create table `ventas`
+2025-03-16T03:51:41.501345Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.502440Z	   32 Query	show fields from `ventas`
+2025-03-16T03:51:41.503503Z	   32 Query	show fields from `ventas`
+2025-03-16T03:51:41.506139Z	   32 Query	SELECT /*!40001 SQL_NO_CACHE */ * FROM `ventas`
+2025-03-16T03:51:41.511996Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.512420Z	   32 Query	use `PuntoVenta`
+2025-03-16T03:51:41.512815Z	   32 Query	select @@collation_database
+2025-03-16T03:51:41.513405Z	   32 Query	SHOW TRIGGERS LIKE 'ventas'
+2025-03-16T03:51:41.514512Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.514908Z	   32 Query	SET SESSION character_set_results = 'binary'
+2025-03-16T03:51:41.515302Z	   32 Query	SELECT COLUMN_NAME,                       JSON_EXTRACT(HISTOGRAM, '$."number-of-buckets-specified"')                FROM information_schema.COLUMN_STATISTICS                WHERE SCHEMA_NAME = 'PuntoVenta' AND TABLE_NAME = 'ventas'
+2025-03-16T03:51:41.515868Z	   32 Query	SET SESSION character_set_results = 'utf8mb4'
+2025-03-16T03:51:41.516198Z	   32 Query	UNLOCK TABLES
+2025-03-16T03:51:41.519461Z	   32 Quit	
